@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список задач</title>
+</head>
+<body>
+    <h1>Список задач</h1>
+
+    <ul>
+        {% for task in tasks %}
+        <li>{{ task.title }}</li>
+        <li><a href="{% url 'delete_task' task_id=task.id %}">удалить</a></li>
+        <li><a href="{% url 'task_completion' task_id=task.id %}">выполнено</a></li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

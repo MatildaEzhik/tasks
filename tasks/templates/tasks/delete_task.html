@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>delete tasl</title>
+</head>
+<body>
+    <h1>delette task</h1>
+    <p>вы точно хотите удалить"{{ task.title }}"?</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <button type="submit">подтвердить удаление</button>
+    </form>
+</body>
+</html>
